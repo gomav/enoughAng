@@ -1,10 +1,9 @@
 angular.module('myApp', ['ngMaterial'])
-    .controller('MainCtrl', function($scope){
-        $scope.label='Item One';
-        $scope.description='Awesome Item!';
-    })
-    .controller('SecondaryCtrl', function(){
-        this.label='Item Two';
-        this.description='A better way';
-
+    .controller('MainCtrl', function(){
+        this.item={
+            label: 'Item One',
+            description: 'I\'m on an object boat'
+        };
+        this.label='Item One';
+        this.description='Awesome Item!';
     });

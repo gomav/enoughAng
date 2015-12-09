@@ -15,16 +15,18 @@
             <div layout="row" layout-align="center start">
                 <div flex-gt-sm="80" flex-sm="90" layout-fill>
                     <md-card>
-                        <md-card-content ng-controller="MainCtrl">
-                            <h3>{{label}}</h3>
-                                <p>{{description}}</p>
+                        <md-card-content ng-controller="MainCtrl as ctrl">
+                            <h2>Raw Item</h2>
+                            <p><pre>
+                                {{ctrl.item | json}}
+                            </p></pre>
+                            <md-divider></md-divider>
+                            <h2>Current Item</h2>
+                            <h3>{{ctrl.item.label}}</h3>
+                                <p>{{ctrl.item.description}}</p>
                         </md-card-content>
                     </md-card>
                     <md-card>
-                        <md-card-content ng-controller="SecondaryCtrl as ctrl">
-                            <h3>{{ctrl.label}}</h3>
-                                <p>{{ctrl.description}}</p>
-                        </md-card-content>
                     </md-card>
                 </div>
             </div>
